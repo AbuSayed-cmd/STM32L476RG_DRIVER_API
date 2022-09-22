@@ -7,8 +7,10 @@ By using this Driver API, We can configure -
 * Read from GPIOx pin
 * Write GPIOx Pin
 * Alternate Functionality
-
 In the Drivers folder, you will get source and Header files of the Driver API.
+
+**NOTE:**
+**We can use Headler File package developed by STMicroelectronics, can write the progam with less Effort**
 
 ## Used Software 
 STM32CubeIDE
