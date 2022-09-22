@@ -10,7 +10,7 @@ By using this Driver API, We can configure -
 In the Drivers folder, you will get source and Header files of the Driver API.
 
 **NOTE:**
-**We can use Headler File package developed by STMicroelectronics, can write the progam with less Effort**
+**We can use Header File package developed by STMicroelectronics, can write the progam with less Effort**
 
 ## Used Software 
 STM32CubeIDE
