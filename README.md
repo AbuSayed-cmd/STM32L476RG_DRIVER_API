@@ -1,6 +1,6 @@
 # STM32L476_GPIO_DRIVER_API
 ## The development of API of GPIOx Peripheral
-In this file I have developed an API for GPIOx Driver Peripheral by using STM32L476RG Nucleo Micro-controller.
+In this file I have developed a GPIOx Driver API Peripheral for STM32L476RG Nucleo Micro-controller.
 By using this Driver API, We can configure -
 * GPIOx Initialization
 * Enable/Disable GPIOx Port Clock
