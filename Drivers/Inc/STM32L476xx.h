@@ -50,7 +50,7 @@
  * Base Address of Peripherals which hanging with ABH1 Bus
  */
 
-#define RCC_BASEADDR          (ABH1PERIPH_BASEADDR + 0x1000)
+#define RCC_BASEADDR          (ABH1PERIPH_BASEADDR + 0x1000) // 0x40021000
 
 /*
  * Base Address of Peripherals which hanging with APB1(80 MHz) Bus
@@ -86,7 +86,7 @@
 /*********************************Peripheral Register Definition Structure*************************************/
 
 typedef struct{
-	_vo uint32_t MODER;
+	_vo uint32_t MODER; // Hold the value of GPIOx_Mode Register
 	_vo uint32_t OTYPER;
 	_vo uint32_t OSPEEDR;
 	_vo uint32_t PUPDR;
@@ -118,47 +118,51 @@ typedef struct{
  */
 
 typedef struct{
-	_vo uint32_t CR;               /*Address offset: 0x00 */
-	_vo uint32_t ICSCR;
-	_vo uint32_t CFGR;
-	_vo uint32_t PLLCFGR;
-	_vo uint32_t PLLSAI1CFGR;
-	_vo uint32_t PLLSAI2CFGR;
-	_vo uint32_t CIER;
-	_vo uint32_t CICR;
-	_vo uint32_t AHB1RSTR;
-	_vo uint32_t AHB2RSTR;
-	_vo uint32_t AHB3RSTR;
-	_vo uint32_t APB1RSTR1;
-	_vo uint32_t APB1RSTR2;
-	_vo uint32_t APB2RSTR;
+	_vo uint32_t CR;                        /*Address offset: 0x00 */
+	_vo uint32_t ICSCR;                     /*Address offset: 0x04 */
+	_vo uint32_t CFGR;                      /*Address offset: 0x08 */
+	_vo uint32_t PLLCFGR;                   /*Address offset: 0x0C */
+	_vo uint32_t PLLSAI1CFGR;               /*Address offset: 0x10 */
+	_vo uint32_t PLLSAI2CFGR;               /*Address offset: 0x14 */
+	_vo uint32_t CIER;                      /*Address offset: 0x18 */
 
-	_vo uint32_t AHB1ENR;       /*Address offset: 0x48 */
-	_vo uint32_t AHB2ENR;       /*Address offset: 0x4C */
-	_vo uint32_t AHB3ENR;       /*Address offset: 0x50 */
+	_vo uint32_t CIFR;                      /*Address offset: 0x1C */
+	_vo uint32_t CICR;                      /*Address offset: 0x20 */
+
+	_vo uint32_t AHB1RSTR;                  /*Address offset: 0x28 */
+	_vo uint32_t AHB2RSTR;                  /*Address offset: 0x2C */
+	_vo uint32_t AHB3RSTR;                  /*Address offset: 0x30 */
+
+	_vo uint32_t APB1RSTR1;                 /*Address offset: 0x38 */
+	_vo uint32_t APB1RSTR2;                 /*Address offset: 0x3C */
+	_vo uint32_t APB2RSTR;                  /*Address offset: 0x40 */
+
+	_vo uint32_t AHB1ENR;                   /*Address offset: 0x48 */
+	_vo uint32_t AHB2ENR;                   /*Address offset: 0x4C */
+	_vo uint32_t AHB3ENR;                   /*Address offset: 0x50 */
 
 
-	_vo uint32_t APB1ENR1;
-	_vo uint32_t APB1ENR2;
-	_vo uint32_t APB2ENR;
-	_vo uint32_t AHB1SMENR;
-	_vo uint32_t AHB2SMENR;
+	_vo uint32_t APB1ENR1;                  /*Address offset: 0x58 */
+	_vo uint32_t APB1ENR2;                  /*Address offset: 0x5C */
+	_vo uint32_t APB2ENR;                   /*Address offset: 0x60 */
+	_vo uint32_t AHB1SMENR;                 /*Address offset: 0x68 */
+	_vo uint32_t AHB2SMENR;                 /*Address offset: 0x6C */
 
-	_vo uint32_t AHB3SMENR;
-	_vo uint32_t APB1SMENR1;
-	_vo uint32_t APB1SMENR2;
-	_vo uint32_t APB2SMENR;
-	_vo uint32_t CCIPR;
-	_vo uint32_t BDCR;
-	_vo uint32_t CSR;          /*Address offset: 0x94 */
+	_vo uint32_t AHB3SMENR;                 /*Address offset: 0x70 */
+	_vo uint32_t APB1SMENR1;                /*Address offset: 0x78 */
+	_vo uint32_t APB1SMENR2;                /*Address offset: 0x7C */
+	_vo uint32_t APB2SMENR;                 /*Address offset: 0x80 */
+	_vo uint32_t CCIPR;                     /*Address offset: 0x88 */
+	_vo uint32_t BDCR;                      /*Address offset: 0x90 */
+	_vo uint32_t CSR;                       /*Address offset: 0x94 */
 
 }RCC_RegDef_t;
 
 /*
  * Peripheral definitions(Peripheral Base Addresses type cast to RCC_RegDef_t
+ * RCC ->AHB1ENR = 25; //
+ * *(0x4002 1000 + 0x48) = 25
  */
-
-//#define RCC (RCC_RegDef_t*)RCC_BAS(RCC_BASEADDR))
 #define RCC ((RCC_RegDef_t*) RCC_BASEADDR)
 
 /*

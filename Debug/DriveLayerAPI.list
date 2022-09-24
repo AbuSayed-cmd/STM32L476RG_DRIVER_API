@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  00010648  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00000809  00000000  00000000  00010678  2**0
+ 13 .debug_info   00000816  00000000  00000000  00010678  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 0000022e  00000000  00000000  00010e81  2**0
+ 14 .debug_abbrev 0000022e  00000000  00000000  00010e8e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 000000a8  00000000  00000000  000110b0  2**3
+ 15 .debug_aranges 000000a8  00000000  00000000  000110c0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000080  00000000  00000000  00011158  2**3
+ 16 .debug_ranges 00000080  00000000  00000000  00011168  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  000014bd  00000000  00000000  000111d8  2**0
+ 17 .debug_macro  000014bd  00000000  00000000  000111e8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00000bc2  00000000  00000000  00012695  2**0
+ 18 .debug_line   00000bc2  00000000  00000000  000126a5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00004e47  00000000  00000000  00013257  2**0
+ 19 .debug_str    00004e4c  00000000  00000000  00013267  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000050  00000000  00000000  0001809e  2**0
+ 20 .comment      00000050  00000000  00000000  000180b3  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  000001d4  00000000  00000000  000180f0  2**2
+ 21 .debug_frame  000001d4  00000000  00000000  00018104  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -102,10 +102,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80001e0:	d106      	bne.n	80001f0 <GPIO_PeriClockControl+0x28>
 			GPIOA_PCLK_EN();
  80001e2:	4b58      	ldr	r3, [pc, #352]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80001e4:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80001e4:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80001e6:	4a57      	ldr	r2, [pc, #348]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80001e8:	f043 0301 	orr.w	r3, r3, #1
- 80001ec:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 80001ec:	6413      	str	r3, [r2, #64]	; 0x40
 					GPIOG_PCLK_DA();
 				}else if (pGPIOx == GPIOH){
 					GPIOH_PCLK_DA();
@@ -120,10 +120,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80001f6:	d106      	bne.n	8000206 <GPIO_PeriClockControl+0x3e>
 			GPIOB_PCLK_EN();
  80001f8:	4b52      	ldr	r3, [pc, #328]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80001fa:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80001fa:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80001fc:	4a51      	ldr	r2, [pc, #324]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80001fe:	f043 0302 	orr.w	r3, r3, #2
- 8000202:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000202:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000204:	e098      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if(pGPIOx == GPIOC){
@@ -133,10 +133,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  800020c:	d106      	bne.n	800021c <GPIO_PeriClockControl+0x54>
 			GPIOC_PCLK_EN();
  800020e:	4b4d      	ldr	r3, [pc, #308]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000210:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000210:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000212:	4a4c      	ldr	r2, [pc, #304]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000214:	f043 0304 	orr.w	r3, r3, #4
- 8000218:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000218:	6413      	str	r3, [r2, #64]	; 0x40
 }
  800021a:	e08d      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if (pGPIOx == GPIOD){
@@ -146,10 +146,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  8000222:	d106      	bne.n	8000232 <GPIO_PeriClockControl+0x6a>
 			GPIOD_PCLK_EN();
  8000224:	4b47      	ldr	r3, [pc, #284]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000226:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000226:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000228:	4a46      	ldr	r2, [pc, #280]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  800022a:	f043 0308 	orr.w	r3, r3, #8
- 800022e:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 800022e:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000230:	e082      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if (pGPIOx == GPIOE){
@@ -159,10 +159,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  8000238:	d106      	bne.n	8000248 <GPIO_PeriClockControl+0x80>
 			GPIOE_PCLK_EN();
  800023a:	4b42      	ldr	r3, [pc, #264]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 800023c:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 800023c:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  800023e:	4a41      	ldr	r2, [pc, #260]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000240:	f043 0310 	orr.w	r3, r3, #16
- 8000244:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000244:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000246:	e077      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if (pGPIOx == GPIOF){
@@ -172,10 +172,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  800024e:	d106      	bne.n	800025e <GPIO_PeriClockControl+0x96>
 			GPIOF_PCLK_EN();
  8000250:	4b3c      	ldr	r3, [pc, #240]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000252:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000252:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000254:	4a3b      	ldr	r2, [pc, #236]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000256:	f043 0320 	orr.w	r3, r3, #32
- 800025a:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 800025a:	6413      	str	r3, [r2, #64]	; 0x40
 }
  800025c:	e06c      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if (pGPIOx == GPIOG){
@@ -185,10 +185,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  8000264:	d106      	bne.n	8000274 <GPIO_PeriClockControl+0xac>
 			GPIOG_PCLK_EN();
  8000266:	4b37      	ldr	r3, [pc, #220]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000268:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000268:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  800026a:	4a36      	ldr	r2, [pc, #216]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  800026c:	f043 0340 	orr.w	r3, r3, #64	; 0x40
- 8000270:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000270:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000272:	e061      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		}else if (pGPIOx == GPIOH){
@@ -198,10 +198,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  800027a:	d15d      	bne.n	8000338 <GPIO_PeriClockControl+0x170>
 			GPIOH_PCLK_EN();
  800027c:	4b31      	ldr	r3, [pc, #196]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 800027e:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 800027e:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000280:	4a30      	ldr	r2, [pc, #192]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000282:	f043 0380 	orr.w	r3, r3, #128	; 0x80
- 8000286:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000286:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000288:	e056      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 		if(pGPIOx == GPIOA){
@@ -210,10 +210,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  8000290:	d106      	bne.n	80002a0 <GPIO_PeriClockControl+0xd8>
 				GPIOA_PCLK_DA();
  8000292:	4b2c      	ldr	r3, [pc, #176]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000294:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000294:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000296:	4a2b      	ldr	r2, [pc, #172]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000298:	f023 0301 	bic.w	r3, r3, #1
- 800029c:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 800029c:	6413      	str	r3, [r2, #64]	; 0x40
 }
  800029e:	e04b      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if(pGPIOx == GPIOB){
@@ -223,10 +223,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80002a6:	d106      	bne.n	80002b6 <GPIO_PeriClockControl+0xee>
 					GPIOB_PCLK_DA();
  80002a8:	4b26      	ldr	r3, [pc, #152]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80002aa:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80002aa:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80002ac:	4a25      	ldr	r2, [pc, #148]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80002ae:	f023 0302 	bic.w	r3, r3, #2
- 80002b2:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 80002b2:	6413      	str	r3, [r2, #64]	; 0x40
 }
  80002b4:	e040      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if(pGPIOx == GPIOC){
@@ -236,10 +236,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80002bc:	d106      	bne.n	80002cc <GPIO_PeriClockControl+0x104>
 					GPIOC_PCLK_DA();
  80002be:	4b21      	ldr	r3, [pc, #132]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80002c0:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80002c0:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80002c2:	4a20      	ldr	r2, [pc, #128]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80002c4:	f023 0304 	bic.w	r3, r3, #4
- 80002c8:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 80002c8:	6413      	str	r3, [r2, #64]	; 0x40
 }
  80002ca:	e035      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if (pGPIOx == GPIOD){
@@ -249,10 +249,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80002d2:	d106      	bne.n	80002e2 <GPIO_PeriClockControl+0x11a>
 					GPIOD_PCLK_DA();
  80002d4:	4b1b      	ldr	r3, [pc, #108]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80002d6:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80002d6:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80002d8:	4a1a      	ldr	r2, [pc, #104]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80002da:	f023 0308 	bic.w	r3, r3, #8
- 80002de:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 80002de:	6413      	str	r3, [r2, #64]	; 0x40
 }
  80002e0:	e02a      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if (pGPIOx == GPIOE){
@@ -262,10 +262,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80002e8:	d106      	bne.n	80002f8 <GPIO_PeriClockControl+0x130>
 					GPIOE_PCLK_DA();
  80002ea:	4b16      	ldr	r3, [pc, #88]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 80002ec:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 80002ec:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  80002ee:	4a15      	ldr	r2, [pc, #84]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  80002f0:	f023 0310 	bic.w	r3, r3, #16
- 80002f4:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 80002f4:	6413      	str	r3, [r2, #64]	; 0x40
 }
  80002f6:	e01f      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if (pGPIOx == GPIOF){
@@ -275,10 +275,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  80002fe:	d106      	bne.n	800030e <GPIO_PeriClockControl+0x146>
 					GPIOF_PCLK_DA();
  8000300:	4b10      	ldr	r3, [pc, #64]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000302:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000302:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000304:	4a0f      	ldr	r2, [pc, #60]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000306:	f023 0320 	bic.w	r3, r3, #32
- 800030a:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 800030a:	6413      	str	r3, [r2, #64]	; 0x40
 }
  800030c:	e014      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if (pGPIOx == GPIOG){
@@ -288,10 +288,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  8000314:	d106      	bne.n	8000324 <GPIO_PeriClockControl+0x15c>
 					GPIOG_PCLK_DA();
  8000316:	4b0b      	ldr	r3, [pc, #44]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 8000318:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 8000318:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  800031a:	4a0a      	ldr	r2, [pc, #40]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  800031c:	f023 0340 	bic.w	r3, r3, #64	; 0x40
- 8000320:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000320:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000322:	e009      	b.n	8000338 <GPIO_PeriClockControl+0x170>
 				}else if (pGPIOx == GPIOH){
@@ -301,10 +301,10 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
  800032a:	d105      	bne.n	8000338 <GPIO_PeriClockControl+0x170>
 					GPIOH_PCLK_DA();
  800032c:	4b05      	ldr	r3, [pc, #20]	; (8000344 <GPIO_PeriClockControl+0x17c>)
- 800032e:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 800032e:	6c1b      	ldr	r3, [r3, #64]	; 0x40
  8000330:	4a04      	ldr	r2, [pc, #16]	; (8000344 <GPIO_PeriClockControl+0x17c>)
  8000332:	f023 0380 	bic.w	r3, r3, #128	; 0x80
- 8000336:	63d3      	str	r3, [r2, #60]	; 0x3c
+ 8000336:	6413      	str	r3, [r2, #64]	; 0x40
 }
  8000338:	bf00      	nop
  800033a:	370c      	adds	r7, #12

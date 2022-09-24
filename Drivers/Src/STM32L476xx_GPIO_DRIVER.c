@@ -1,9 +1,3 @@
-/*
- * STM32L476xx_GPIO_DRIVER.c
- *
- *  Created on: Sep 20, 2022
- *      Author: ABU SAYED
- */
 
 #include "STM32L476xx_GPIO_DRIVER.h"
 

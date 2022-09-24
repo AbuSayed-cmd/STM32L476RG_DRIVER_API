@@ -1,9 +1,3 @@
-/*
- * STM32L476xx_GPIO_DRIVER.h
- *
- *  Created on:
- *      Author: ABU SAYED
- */
 
 #ifndef INC_STM32L476XX_GPIO_DRIVER_H_
 #define INC_STM32L476XX_GPIO_DRIVER_H_

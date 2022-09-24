@@ -1,9 +1,3 @@
-/*
- * 01LedToggle.c
- *
- *  Created on: Sep 21, 2022
- *      Author: ABU SAYED
- */
 
 #include <stdint.h>
 #include "STM32L476xx.h"
