@@ -7,6 +7,8 @@ By using this Driver API, We can configure -
 * Read from GPIOx pin
 * Write GPIOx Pin
 * Alternate Functionality
+
+
 In the Drivers folder, you will get source and Header files of the Driver API.
 
 **NOTE:**
