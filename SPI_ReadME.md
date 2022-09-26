@@ -8,5 +8,5 @@ SPIx peripheral consist of followings-
 * SPI_CHPA:
 * SPI_SSM
 
-# SPI Send Data Block Digram
+### SPI Send Data Block Digram
 ![](Images/Send%20Data.jpg)
