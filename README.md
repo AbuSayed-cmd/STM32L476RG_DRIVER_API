@@ -16,7 +16,7 @@ By using this Driver API, We can configure -
 * SPI Rx
 * SPI Interrupt Configuration and Handling(No Implemented)
 
-
+**For More info, Please check SPI Readme file **
 **NOTE:**
 **We can use Header File package developed by STMicroelectronics, can write the progam with less Effort**
 
