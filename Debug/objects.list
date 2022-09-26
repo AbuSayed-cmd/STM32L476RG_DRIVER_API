@@ -1,3 +1,4 @@
+"./Drivers/Src/SPI_Driver.o"
 "./Drivers/Src/STM32L476xx_GPIO_DRIVER.o"
 "./Src/01LedToggle.o"
 "./Startup/startup_stm32l476rgtx.o"

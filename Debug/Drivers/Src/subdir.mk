@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Drivers/Src/SPI_Driver.c \
 ../Drivers/Src/STM32L476xx_GPIO_DRIVER.c 
 
 OBJS += \
+./Drivers/Src/SPI_Driver.o \
 ./Drivers/Src/STM32L476xx_GPIO_DRIVER.o 
 
 C_DEPS += \
+./Drivers/Src/SPI_Driver.d \
 ./Drivers/Src/STM32L476xx_GPIO_DRIVER.d 
 
 
@@ -21,7 +24,7 @@ Drivers/Src/%.o Drivers/Src/%.su: ../Drivers/Src/%.c Drivers/Src/subdir.mk
 clean: clean-Drivers-2f-Src
 
 clean-Drivers-2f-Src:
-	-$(RM) ./Drivers/Src/STM32L476xx_GPIO_DRIVER.d ./Drivers/Src/STM32L476xx_GPIO_DRIVER.o ./Drivers/Src/STM32L476xx_GPIO_DRIVER.su
+	-$(RM) ./Drivers/Src/SPI_Driver.d ./Drivers/Src/SPI_Driver.o ./Drivers/Src/SPI_Driver.su ./Drivers/Src/STM32L476xx_GPIO_DRIVER.d ./Drivers/Src/STM32L476xx_GPIO_DRIVER.o ./Drivers/Src/STM32L476xx_GPIO_DRIVER.su
 
 .PHONY: clean-Drivers-2f-Src
 

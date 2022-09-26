@@ -4,22 +4,18 @@
 #include "STM32L476xx_GPIO_DRIVER.h"
 
 void delay(void){
-	for(uint32_t i = 0; i <1000; i++);
+	for(uint32_t i = 0; i <100000; i++);
 }
 
 int main(void){
-	GPIO_Handle_t GpioLed;
+	GPIO_Handle_t Led;
 
-	GpioLed.pGPIOx = GPIOA;
-	GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_5;
-	GpioLed.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
-	GpioLed.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
-	GpioLed.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
-	GpioLed.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
-
+	Led.pGPIOx = GPIOA;
+	Led.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_5;
+	Led.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
 
 	GPIO_PeriClockControl(GPIOA, ENABLE);
-	GPIO_Init(&GpioLed);
+	GPIO_Init(&Led);
 
 	while(1){
 		GPIO_ToggleOutputPin(GPIOA, GPIO_PIN_NO_5);
