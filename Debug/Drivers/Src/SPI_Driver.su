@@ -1,0 +1,5 @@
+../Drivers/Src/SPI_Driver.c:8:6:SPI_ClkControl	16	static
+../Drivers/Src/SPI_Driver.c:28:6:SPI_Initilization	24	static
+../Drivers/Src/SPI_Driver.c:64:6:SPI_Deinitilization	16	static
+../Drivers/Src/SPI_Driver.c:77:10:SPI_FlagStaus	16	static
+../Drivers/Src/SPI_Driver.c:84:6:SPI_Send_Data	24	static
