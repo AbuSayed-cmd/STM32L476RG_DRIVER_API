@@ -1,4 +1,4 @@
-# STM32L476_GPIO_DRIVER_API
+# STM32L476_DRIVER_API(GPIOX, SPI)
 ## The development of API of GPIOx Peripheral
 In this file I have developed a GPIOx Driver API Peripheral for STM32L476RG Nucleo Micro-controller.
 By using this Driver API, We can configure -
@@ -8,8 +8,14 @@ By using this Driver API, We can configure -
 * Write GPIOx Pin
 * Alternate Functionality
 
+## The development of API of SPIx Peripheral
+In this file I have developed a SPIx Driver API Peripheral for STM32L476RG Nucleo Micro-controller.
+By using this Driver API, We can configure -
+* SPIx Initialization
+* SPI Tx
+* SPI Rx
+* SPI Interrupt Configuration and Handling(No Implemented)
 
-In the Drivers folder, you will get source and Header files of the Driver API.
 
 **NOTE:**
 **We can use Header File package developed by STMicroelectronics, can write the progam with less Effort**
